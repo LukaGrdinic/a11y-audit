@@ -71,7 +71,7 @@
     <header class="fixed-top d-flex">
         <nav class="navbar navbar-expand-lg bg-body-tertiary w-100">
             <div class="container">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="#" aria-label="Website homepage">
                     <i class="fa-solid fa-paw"></i>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -81,6 +81,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!-- TODO: make sure there is bad contrast on some of the header links -->
                         <!-- <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li> -->
@@ -125,10 +126,22 @@
                     checkups
                     and vaccinations. Our compassionate team ensures that your pets receive the best possible care.
                 </p>
+                <p>
+                    Our clinic stands out for our personalized approach to each furry companion that walks through our
+                    doors. Beyond providing medical expertise, we prioritize building lasting relationships with both
+                    pets and their families.
+                </p>
+                <p>
+                    We believe in open communication and strive to involve pet owners in their
+                    animals' well-being every step of the way. From tailored treatment plans to thorough guidance on
+                    nutrition and behavior, we aim to empower pet parents to make informed decisions for the health and
+                    happiness of their beloved animals.
+                </p>
 
             </div>
             <div class="col-md-6 text-center">
                 <div>
+                    <!-- TODO: Make sure there is incorrect alt text -->
                     <img src="images/dog-wrapped-in-blanket-in-forest.jpg" alt="Veterinarian Image" class="img-fluid">
                 </div>
             </div>
@@ -138,6 +151,17 @@
                 <h2 class="my-3">Our Expert Veterinarians</h2>
                 <p>Meet our team of dedicated veterinarians who are passionate about the well-being of animals. Each
                     veterinarian brings a wealth of knowledge and experience to ensure your pets are in good hands.
+                </p>
+                <p>
+                    Our team of veterinarians goes beyond their professional expertise; they embody a profound love for
+                    animals that drives their commitment to exceptional care. With diverse backgrounds and specialized
+                    areas of focus, our veterinarians collaborate seamlessly to address a wide spectrum of pet health
+                    needs.
+                </p>
+                <p>
+                    From the moment you step into our clinic, you'll experience the warmth and dedication that
+                    define our team. We take the time to listen, understand, and tailor our approach to suit the
+                    individual needs of every pet, fostering a trusting bond that extends far beyond medical treatment.
                 </p>
             </div>
             <div class="col-md-6 text-center">
@@ -156,15 +180,13 @@
                         <!-- Additional Paragraph 4 -->
                         <p>Explore the gallery below to catch a
                             glimpse of the
-                            heartwarming moments shared between our staff and the beloved animals we've had the pleasure
-                            of
-                            welcoming into our
-                            veterinary family.</p>
+                            heartwarming moments shared between pets and their owners just days after being treated in
+                            our clinic.</p>
                     </div>
                 </div>
 
-
                 <!-- Image Gallery (Replace with your own images later) -->
+                <!-- TODO: There should be an image without alt text  -->
                 <div class="row mt-4">
                     <div class="col-md-4">
                         <img class="max-h-275px img-fit-cover w-100 mb-3" src="images/cat-1.jpg" alt="Happy Pet 1">
@@ -210,6 +232,7 @@
                     <div class="card-body px-sm-5">
                         <div class="d-flex align-items-center mt-3 mb-4">
                             <span class="pe-3"><i class="fa-regular fa-calendar-check fa-2x"></i></span>
+                            <!-- TODO: Make sure this is an h3, which should not make sense -->
                             <h2 class="mb-0">Make an appointment</h2>
                         </div>
                         <form action="#" method="post">
@@ -299,6 +322,7 @@
                             <button class="btn btn-primary" id="submitBtn" type="submit" value="Submit">Submit</button>
                         </form>
                         <div id="submitAlert" class="d-none" role="alert">
+                            <!-- TODO: Make sure this role alert is not present -->
                             Form submitted successfully!
                         </div>
                     </div>
@@ -307,13 +331,18 @@
         </section>
     </main>
 
-    <footer class="container d-flex flex-column flex-sm-row justify-content-between mt-5">
-        <p>&copy; 2021 Paws and Claws Vet</p>
-        <div>
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    <footer class="bg-light">
+        <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center mt-5 py-3">
+            <p class="mb-0">&copy; 2021 Paws and Claws Vet</p>
+            <div>
+                <a class="text-dark fs-4 me-1" aria-label="Facebook" href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a class="text-dark fs-4" aria-label="Instagram" href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
         </div>
     </footer>
+
+    <!-- TODO: Make sure this dialog does not focus on opening -->
+    <!-- TODO: Make sure the user can tab out of the dialog (no tab trap) -->
 
     <dialog id="confirmationDialog" aria-labelledby="dialogTitle" aria-describedby="dialogDescription">
         <h3 id="dialogTitle">Confirm Appointment</h3>
