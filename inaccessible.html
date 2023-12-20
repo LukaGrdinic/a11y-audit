@@ -16,15 +16,10 @@
         href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Roboto+Flex:opsz,wght@8..144,300&display=swap"
         rel="stylesheet">
 
-    <!-- our project just needs Font Awesome Solid + Brands -->
-    <link href="/fontawesome-free-6.5.1-web/css/fontawesome.css" rel="stylesheet">
-    <link href="/fontawesome-free-6.5.1-web/css/brands.css" rel="stylesheet">
-    <link href="/fontawesome-free-6.5.1-web/css/solid.css" rel="stylesheet">
-    <link href="/fontawesome-free-6.5.1-web/css/regular.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/bc7b915708.js" crossorigin="anonymous"></script>
 
     <style>
-        /* Font families */
-
         header {
             font-family: 'Roboto Flex', sans-serif;
         }
@@ -56,6 +51,10 @@
             font-weight: 500;
         }
 
+        legend {
+            font-size: 1rem !important;
+        }
+
         .img-fit-cover {
             object-fit: cover;
         }
@@ -63,15 +62,50 @@
         .max-h-275px {
             height: 275px;
         }
+
+        /* Custom modal */
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 250px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: rgb(255, 255, 255);
+            margin: auto;
+            padding: 20px;
+            border: 2px solid black;
+            width: 80%;
+        }
     </style>
 </head>
 
 <body>
 
     <header class="fixed-top d-flex">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary w-100">
+        <nav class="navbar navbar-expand-lg bg-body-secondary w-100">
             <div class="container">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="#" aria-label="Website homepage">
                     <i class="fa-solid fa-paw"></i>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -81,20 +115,17 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <!-- <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li> -->
                         <li class="nav-item">
-                            <a class="nav-link" href="#whyUs">Why Us</a>
+                            <a class="nav-link text-black-50" href="#whyUs">Why Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#ourVeterinarians">Our Veterinarians</a>
+                            <a class="nav-link text-black-50" href="#ourVeterinarians">Our Veterinarians</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#happyCustomers">Happy Customers</a>
+                            <a class="nav-link text-black-50" href="#happyCustomers">Happy Customers</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#appointmentForm">Make an appointment</a>
+                            <a class="nav-link text-black-50" href="#appointmentForm">Make an appointment</a>
                         </li>
                     </ul>
                 </div>
@@ -106,7 +137,12 @@
     <main class="container" style="margin-top: 40px; ">
         <section class="row">
             <div class="col-12">
-                <h1 class="mt-5 pt-3 mb-4 text-center">Paws and Claws Vet</h1>
+                <h1 class="mt-5 pt-3 mb-4 text-center">
+                    <i class="fa-solid fa-paw fa-2x"></i>
+                    <span class="d-block mt-3">
+                        Paws and Claws Vet
+                    </span>
+                </h1>
             </div>
         </section>
         <section id="introduction" class="row">
@@ -123,13 +159,26 @@
                 <h2 class="my-3">Why Choose Us?</h2>
                 <p>With a commitment to excellence, we offer a range of veterinary services, including routine
                     checkups
-                    and vaccinations. Our compassionate team ensures that your pets receive the best possible care.
+                    and vaccinations. Our compassionate team ensures that your pets receive the best possible
+                    care.
+                </p>
+                <p>
+                    Our clinic stands out for our personalized approach to each furry companion that walks through our
+                    doors. Beyond providing medical expertise, we prioritize building lasting relationships with both
+                    pets and their families.
+                </p>
+                <p>
+                    We believe in open communication and strive to involve pet owners in their
+                    animals' well-being every step of the way. From tailored treatment plans to thorough guidance on
+                    nutrition and behavior, we aim to empower pet parents to make informed decisions for the health and
+                    happiness of their beloved animals.
                 </p>
 
             </div>
             <div class="col-md-6 text-center">
                 <div>
-                    <img src="images/dog-wrapped-in-blanket-in-forest.jpg" alt="Veterinarian Image" class="img-fluid">
+                    <img src="images/dog-wrapped-in-blanket-in-forest.jpg" alt="A small cat playing on the beach"
+                        class="img-fluid rounded-3">
                 </div>
             </div>
         </section>
@@ -139,67 +188,79 @@
                 <p>Meet our team of dedicated veterinarians who are passionate about the well-being of animals. Each
                     veterinarian brings a wealth of knowledge and experience to ensure your pets are in good hands.
                 </p>
+                <p>
+                    Our team of veterinarians goes beyond their professional expertise; they embody a profound love for
+                    animals that drives their commitment to exceptional care. With diverse backgrounds and specialized
+                    areas of focus, our veterinarians collaborate seamlessly to address a wide spectrum of pet health
+                    needs.
+                </p>
+                <p>
+                    From the moment you step into our clinic, you'll experience the warmth and dedication that
+                    define our team. We take the time to listen, understand, and tailor our approach to suit the
+                    individual needs of every pet, fostering a trusting bond that extends far beyond medical treatment.
+                </p>
             </div>
             <div class="col-md-6 text-center">
-                <!-- Additional Image 2 (Replace with your own image later) -->
-                <img src="images/tough-guy-with-a-cat.jpg" alt="Tough guy with santa hat holding a cat"
-                    class="img-fluid">
+                <img src="images/tough-guy-with-a-cat.jpg" alt="Our Expert Veterinarians" class="img-fluid rounded-3">
             </div>
         </section>
         <section id="happyCustomers" class="row mt-5">
             <div class="col-md-12 text-center">
                 <div class="row">
                     <div class="col-md-8 mx-auto">
-                        <!-- Additional Heading 4 -->
                         <h2 class="my-3">Hundreds of Happy Customers</h2>
 
-                        <!-- Additional Paragraph 4 -->
                         <p>Explore the gallery below to catch a
                             glimpse of the
-                            heartwarming moments shared between our staff and the beloved animals we've had the pleasure
-                            of
-                            welcoming into our
-                            veterinary family.</p>
+                            heartwarming moments shared between pets and their owners just days after being treated in
+                            our clinic.</p>
                     </div>
                 </div>
 
-
-                <!-- Image Gallery (Replace with your own images later) -->
                 <div class="row mt-4">
                     <div class="col-md-4">
-                        <img class="max-h-275px img-fit-cover w-100 mb-3" src="images/cat-1.jpg" alt="Happy Pet 1">
+                        <img class="max-h-275px img-fit-cover w-100 mb-3 rounded-3" src="images/cat-gray-tiger.jpg"
+                            alt="A gray tiger fur cat laying on a bed">
                     </div>
                     <div class="col-md-4">
-                        <img class="max-h-275px img-fit-cover w-100 mb-3" src="images/dog-1.jpg" alt="Happy Pet 2">
+                        <img class="max-h-275px img-fit-cover w-100 mb-3 rounded-3"
+                            src="images/dog-smiling-in-lavender.jpg">
                     </div>
                     <div class="col-md-4">
-                        <img class="max-h-275px img-fit-cover w-100 mb-3" src="images/dog-and-cat.jpg"
-                            alt="Happy Pet 3">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <img class="max-h-275px img-fit-cover w-100 mb-3" src="images/dogs-1.jpg" alt="Happy Pet 4">
-                    </div>
-                    <div class="col-md-4">
-                        <img class="max-h-275px img-fit-cover w-100 mb-3" src="images/dog-in-a-sweatshirt.jpg"
-                            alt="Happy Pet 5">
-                    </div>
-                    <div class="col-md-4">
-                        <img class="max-h-275px img-fit-cover w-100 mb-3" src="images/cat-2.jpg" alt="Happy Pet 6">
+                        <img class="max-h-275px img-fit-cover w-100 mb-3 rounded-3"
+                            src="images/cat-gray-and-dog-black-on-table.jpg">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <img class="max-h-275px img-fit-cover w-100 mb-3" src="images/dog-and-cat-2.jpg"
-                            alt="Happy Pet 7">
+                        <img class="max-h-275px img-fit-cover w-100 mb-3 rounded-3"
+                            src="images/dogs-puppies-several.jpg"
+                            alt="Seven white puppies squishing one against the other">
                     </div>
                     <div class="col-md-4">
-                        <img class="max-h-275px img-fit-cover w-100 mb-3" src="images/dogs-2.jpg" alt="Happy Pet 8">
+                        <img class="max-h-275px img-fit-cover w-100 mb-3 rounded-3" src="images/dog-in-a-sweatshirt.jpg"
+                            alt="A brown dog wearing a yellow sweatshirt">
                     </div>
                     <div class="col-md-4">
-                        <img class="max-h-275px img-fit-cover w-100 mb-3" src="images/dog-2.jpg" alt="Happy Pet 9"
-                            class="img-fluid mb-3">
+                        <img class="max-h-275px img-fit-cover w-100 mb-3 rounded-3"
+                            src="images/cat-white-and-orange.jpg"
+                            alt="A small white and orange cat staring directly into camera">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img class="max-h-275px img-fit-cover w-100 mb-3 rounded-3"
+                            src="images/cat-green-eyes-and-dog-white-and-black.jpg">
+                    </div>
+                    <div class="col-md-4">
+                        <img class="max-h-275px img-fit-cover w-100 mb-3 rounded-3"
+                            src="images/dogs-two-running-with-tongues-out.jpg"
+                            alt="Two dogs running down the road, with their tongues out">
+                    </div>
+                    <div class="col-md-4">
+                        <img class="max-h-275px img-fit-cover w-100 mb-3 rounded-3"
+                            src="images/dog-black-white-and-brown.jpg"
+                            alt="A black, white and brown little dog with brown eyes looks at the camera">
                     </div>
                 </div>
             </div>
@@ -210,12 +271,12 @@
                     <div class="card-body px-sm-5">
                         <div class="d-flex align-items-center mt-3 mb-4">
                             <span class="pe-3"><i class="fa-regular fa-calendar-check fa-2x"></i></span>
-                            <h2 class="mb-0">Make an appointment</h2>
+                            <h3 class="h2 mb-0">Make an appointment</h3>
                         </div>
                         <form action="#" method="post">
                             <!-- Field 1: Pet's Name (Text Input) -->
                             <div class="mb-3">
-                                <label for="petName">Pet's Name:</label>
+                                <label>Pet's Name:</label>
                                 <input class="form-control" type="text" id="petName" name="petName" required>
                             </div>
                             <!-- Field 2: Pet Type (Radio Buttons) -->
@@ -225,12 +286,12 @@
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" id="dog" name="petType" value="dog"
                                             required>
-                                        <label class="form-check-label" for="dog">Dog</label>
+                                        <label class="form-check-label">Dog</label>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" id="cat" name="petType" value="cat"
                                             required>
-                                        <label class="form-check-label" for="cat">Cat</label>
+                                        <label class="form-check-label">Cat</label>
                                     </div>
                                 </fieldset>
                             </div>
@@ -238,67 +299,47 @@
                             <div class="mb-3">
                                 <fieldset>
                                     <legend>Appointment Type:</legend>
-                                    <div class="form-check">
+                                    <div class="form-check ps-0">
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" id="checkup"
                                                 name="appointmentType[]" value="checkup">
-                                            <label class="form-check-label" for="checkup">Checkup</label>
+                                            <label class="form-check-label">Checkup</label>
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" id="vaccination"
                                                 name="appointmentType[]" value="vaccination">
-                                            <label class="form-check-label" for="vaccination">Vaccination</label>
+                                            <label class="form-check-label">Vaccination</label>
                                         </div>
                                     </div>
                                 </fieldset>
                             </div>
-                            <!-- Field 4: Preferred Date (Text Input) -->
+                            <!-- Field 4: Preferred day of next week: (Dropdown/Select) -->
                             <div class="mb-3">
-                                <label for="preferredDate">Preferred Date:</label>
-                                <input class="form-control" type="text" id="preferredDate" name="preferredDate"
-                                    placeholder="MM/DD/YYYY" required>
+                                <label>Preferred day of next week:</label>
+                                <select class="form-select" id="preferredDay" name="preferredDay" required>
+                                    <option selected value="monday">Monday</option>
+                                    <option value="tuesday">Tuesday</option>
+                                    <option value="wednesday">Wednesday</option>
+                                    <option value="thursday">Thursday</option>
+                                    <option value="friday">Friday</option>
+                                    <option value="saturday">Saturday</option>
+                                    <option value="sunday">Sunday</option>
+                                </select>
                             </div>
-                            <!-- Field 5: Preferred Time (Text Input) -->
+                            <!-- Field 5: Owner's Name (Text Input) -->
                             <div class="mb-3">
-                                <label for="preferredTime">Preferred Time:</label>
-                                <input class="form-control" type="text" id="preferredTime" name="preferredTime"
-                                    placeholder="HH:MM AM/PM" required>
-                            </div>
-                            <!-- Field 6: Owner's Name (Text Input) -->
-                            <div class="mb-3">
-                                <label for="ownerName">Owner's Name:</label>
+                                <label>Owner's Name:</label>
                                 <input class="form-control" type="text" id="ownerName" name="ownerName" required>
                             </div>
-                            <!-- Field 7: Contact Number (Text Input) -->
+                            <!-- Field 8: Email (Email Input) -->
                             <div class="mb-3">
-                                <label for="contactNumber">Contact Number:</label>
-                                <input class="form-control" type="text" id="contactNumber" name="contactNumber"
-                                    required>
-                            </div>
-                            <!-- Field 8: Email (Text Input) -->
-                            <div class="mb-3">
-                                <label for="email">Email:</label>
-                                <input class="form-control" type="text" id="email" name="email" required>
-                            </div>
-                            <!-- Field 9: Emergency Contact (Text Input) -->
-                            <div class="mb-3">
-                                <label for="emergencyContact">Emergency Contact:</label>
-                                <input class="form-control" type="text" id="emergencyContact" name="emergencyContact"
-                                    required>
-                            </div>
-                            <!-- Field 10: Veterinarian (Dropdown/Select) -->
-                            <div class="mb-3">
-                                <label for="veterinarian">Select Veterinarian:</label>
-                                <select class="form-select" id="veterinarian" name="veterinarian" required>
-                                    <option selected value="drSmith">Dr. Smith</option>
-                                    <option value="drJohnson">Dr. Johnson</option>
-                                    <option value="drBrown">Dr. Brown</option>
-                                </select>
+                                <label>Email:</label>
+                                <input class="form-control" type="email" id="email" name="email" required>
                             </div>
                             <!-- Submit Button -->
                             <button class="btn btn-primary" id="submitBtn" type="submit" value="Submit">Submit</button>
                         </form>
-                        <div id="submitAlert" class="d-none" role="alert">
+                        <div id="submitAlert" class="d-none">
                             Form submitted successfully!
                         </div>
                     </div>
@@ -307,22 +348,31 @@
         </section>
     </main>
 
-    <footer class="container d-flex flex-column flex-sm-row justify-content-between mt-5">
-        <p>&copy; 2021 Paws and Claws Vet</p>
-        <div>
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    <footer class="bg-light">
+        <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center mt-5 py-3">
+            <p class="mb-0">&copy; 2021 Paws and Claws Vet</p>
+            <div>
+                <a class="text-dark fs-4 me-1" aria-label="Facebook" href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a class="text-dark fs-4" aria-label="Instagram" href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
         </div>
     </footer>
 
-    <dialog id="confirmationDialog" aria-labelledby="dialogTitle" aria-describedby="dialogDescription">
-        <h3 id="dialogTitle">Confirm Appointment</h3>
-        <p id="dialogDescription">You must show up 15 minutes before the scheduled meeting in order to be admitted. If
-            you accept this
-            time, click OK. If not, click Cancel and change your preferred time in the form, then submit again.</p>
-        <button id="cancelButton" type="button" class="btn btn-secondary">Cancel</button>
-        <button id="okButton" type="button" class="btn btn-primary">OK</button>
-    </dialog>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <h3 id="dialogTitle">Confirm Appointment</h3>
+            <p id="dialogDescription">You must show up 15 minutes before the scheduled meeting in order to be admitted.
+                If
+                you accept this
+                time, click OK. If not, click Cancel and change your preferred time in the form, then submit again.</p>
+            <div class="d-flex align-items-center">
+                <button id="cancelButton" type="button" class="btn btn-secondary me-2">Cancel</button>
+                <button id="okButton" type="button" class="btn btn-primary">OK</button>
+            </div>
+        </div>
+    </div>
 
     <script>
         const dialog = document.getElementById('confirmationDialog');
@@ -330,36 +380,18 @@
         const cancelButton = document.getElementById('cancelButton');
         const form = document.querySelector('form');
         const submitAlert = document.getElementById('submitAlert');
-
-        const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-        const firstFocusableElementInDialog = dialog.querySelectorAll(focusableElements)[0];
-        const lastFocusableElementInDialog = dialog.querySelectorAll(focusableElements)[dialog.querySelectorAll(focusableElements).length - 1];
-
-        firstFocusableElementInDialog.addEventListener('keydown', function (e) {
-            if (e.key === 'Tab' && e.shiftKey) {
-                e.preventDefault();
-                lastFocusableElementInDialog.focus();
-            }
-        });
-
-        lastFocusableElementInDialog.addEventListener('keydown', function (e) {
-            if (e.key === 'Tab' && !e.shiftKey) {
-                e.preventDefault();
-                firstFocusableElementInDialog.focus();
-            }
-        });
+        const modal = document.getElementById("myModal");
 
         form.addEventListener('submit', function (event) {
             // Prevent the form from submitting
             event.preventDefault();
-
             // Show the dialog
-            dialog.showModal();
+            modal.style.display = "block";
         });
 
         okButton.addEventListener('click', function () {
             // If the user clicks OK, close the dialog and manually submit the form
-            dialog.close();
+            modal.style.display = "none";
             // form.submit();
 
             // Show an alert after the form is submitted
@@ -369,8 +401,10 @@
 
         cancelButton.addEventListener('click', function () {
             // If the user clicks Cancel, close the dialog and reset the preferred time field
-            dialog.close();
+            modal.style.display = "none";
         });
+
+
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
